@@ -17,8 +17,21 @@ body {
   position: absolute;
   top: 0;
   left: 0;
+  width: 10%;
 }
 
 .car-size {
-  width: 40%;
+  width: 100%;
+}
+
+.rotate-left {
+  transform: rotate(.5turn);
+}
+
+.rotate-down {
+  transform: rotate(.25turn);
+}
+
+.rotate-up {
+  transform: rotate(.75turn);
 }
