@@ -3,7 +3,7 @@ var $car = document.querySelector('.car-size');
 var intervalId = null;
 var topElf = 0;
 var leftShake = 0;
-var movementCheck = 0;
+var movementCheck = true;
 
 function rotate(key) {
   if (key === 'ArrowUp') {
@@ -18,19 +18,21 @@ function rotate(key) {
 }
 
 function move(key) {
-  if (movementCheck % 2 !== 0) {
-    leftShake++;
-    $carContainer.style.left = leftShake + 'px';
-    $carContainer.style.top = topElf + 'px';
-  } else {
-    clearInterval(intervalId);
-  }
+  leftShake++;
+  $carContainer.style.left = leftShake + 'px';
+  $carContainer.style.top = topElf + 'px';
 }
 
 document.addEventListener('keydown', function (e) {
   rotate(e.key);
   if (e.code === 'Space') {
-    intervalId = setInterval(move, 16);
-    movementCheck++;
+    if (movementCheck === true) {
+      clearInterval(intervalId);
+      movementCheck = false;
+    } else {
+      intervalId = setInterval(move, 16);
+      movementCheck = true;
+    }
+
   }
 });
