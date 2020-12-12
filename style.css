@@ -15,6 +15,7 @@ body {
 
 .car-size {
   width: 75px;
+  position: absolute;
 }
 
 .rotate-left {
