@@ -19,13 +19,13 @@ body {
 }
 
 .rotate-left {
-  transform: rotate(.5turn);
+  transform: rotate(0.5turn);
 }
 
 .rotate-down {
-  transform: rotate(.25turn);
+  transform: rotate(0.25turn);
 }
 
 .rotate-up {
-  transform: rotate(.75turn);
+  transform: rotate(0.75turn);
 }
