@@ -4,7 +4,7 @@ var intervalId = null;
 var topElf = 0;
 var leftShake = 0;
 var movementCheck = false;
-var direction = 'Arrowright';
+var direction = 'ArrowRight';
 
 function rotate(key) {
   if (key === 'ArrowUp') {
@@ -29,7 +29,7 @@ function rotate(key) {
     $carContainer.style.top = topElf + 'px';
   }
   if (key === 'ArrowDown') {
-    topElf--;
+    topElf++;
     $car.className = 'car-size rotate-down';
     direction = 'ArrowDown';
     $carContainer.style.left = leftShake + 'px';
