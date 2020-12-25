@@ -40,7 +40,7 @@ function rotate(key) {
 
 function move() {
   rotate(direction);
-  console.log(topElf);
+
 }
 
 document.addEventListener('keydown', function (e) {
